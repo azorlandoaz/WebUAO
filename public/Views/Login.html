@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio - Parking</title>
+    <link rel="icon" href="wwv_flow_file_mgr.get_file?p_security_group_id=823609015050175&amp;p_fname=favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styleLogin.css">
+</head>
+<body ng-app="parking">
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/angular.min.js"></script>
+
+    <div id="formWrapper" ng-controller="loginCtrl">
+        <div id="form">
+            <div class="logo">
+
+            <img src="../images/logo.png" style="width: 120px; height: 120px;">
+               <!-- <h1 id="title" class="hidden"><span id="logo">Parking <span>ID+</span></span></h1>-->
+            </div>
+            <form ng-submit="clickLogin()">
+                <div class="form-item">
+                    <p class="formLabel">Usuario</p>
+                    <input type="text" name="email" id="email" class="form-style" autocomplete="off" ng-model="login.username" />
+                </div>
+                <div class="form-item">
+                    <p class="formLabel">Contraseña</p>
+                    <input type="password" name="password" id="password" class="form-style" ng-model="login.UserPassword" />
+                    <p>
+                        <a href="#"><small>¿Olvido su contraseña?</small></a>
+                    </p>
+                </div>
+                <div class="form-item">
+                    <input type="submit" class="login pull-right" value="Iniciar sesion">
+                    {{login.error}}
+                    <div class="clear-fix"></div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <script src="../js/Login.js"></script>
+</body>
+</html>
