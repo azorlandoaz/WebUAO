@@ -28,22 +28,21 @@ app.post('/', General_Service.post);
 
 app.get('/createRegistro/:collection/:v1/:v2/:v3',Registro_Service.createRegistro);
 
-app.get('/readUsuario/:param/:value',User_Service.readUsuario);
-app.get('/readUsuario/:param',User_Service.readUsuarioByName);
+app.get('/readUser/:param/:value',User_Service.readUsuario);
+app.get('/readUser/:param',User_Service.readUsuarioByName);
+app.get('/createUser/:v1/:v2/:v3',User_Service.createUsuario);
 
-app.get('/createUsuario/:v1/:v2/:v3/:v4/:v5',User_Service.createUsuario);
+app.get('/createEnrollment/:collection/:v1/:v2',Enrollment_Service.create);
+app.get('/readEnrollment/:collection',Enrollment_Service.read);
+app.get('/EnrollmentReadX/:collection/:param/:value', Enrollment_Service.readX);
 
-app.get('/create/:collection/:v1/:v2',Enrollment_Service.create);
-app.get('/readElement/:collection',Enrollment_Service.read);
-app.get('/ElementReadX/:collection/:param/:value', Enrollment_Service.readX);
+app.get('/ScoreCreate/:collection/:v1/:v2/:v3/:v4', Score_Service.create);
+app.get('/ScoreRead/:collection', Score_Service.read);
+app.get('/ScoreReadX/:collection/:param/:value', Score_Service.readX);
 
-app.get('/prestamoCreate/:collection/:v1/:v2/:v3', Score_Service.create);
-app.get('/prestamoRead/:collection', Score_Service.read);
-app.get('/prestamoReadX/:collection/:param/:value', Score_Service.readX);
-
-app.get('/CreateItem/:collection/:v1/:v2', Subject_Service.create);
-app.get('/ReadItem/:collection', Subject_Service.read);
-app.get('/itemReadX/:collection/:param/:value', Subject_Service.readX);
+app.get('/CreateSubject/:collection/:v1/:v2/:v3/:v4/:v5', Subject_Service.create);
+app.get('/ReadSubject/:collection', Subject_Service.read);
+app.get('/SubjectReadX/:collection/:param/:value', Subject_Service.readX);
 
 http.createServer(app).listen(port);
 console.log("Servidor activo por el puerto " + port);

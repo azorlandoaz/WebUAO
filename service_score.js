@@ -6,7 +6,7 @@ create = function (request,response) {
 	var v2 = request.params.v2;
 	var v3 = request.params.v3;
 			
-	var object = factory.createObjectWithName(tabla,v1,v2,v3);
+	var object = factory.createObjectWithName(tabla,v1,v2,v3,v4);
 	var existe = false;
 	
 	if ( object !== null)

@@ -85,7 +85,7 @@ module.exports.readUsuarioByName = function (request,response) {
 	
 	if ( existe == true)
 	{
-		object.find().where("Usuario").equals(param).exec(buscarDatos);
+		object.find().where("username").equals(param).exec(buscarDatos);
 	}
 	else
 	{
@@ -110,10 +110,8 @@ module.exports.createUsuario = function (request,response) {
 	var v1 = request.params.v1;
 	var v2 = request.params.v2;
 	var v3 = request.params.v3;
-	var v4 = request.params.v4;
-	var v5 = request.params.v5;
 			
-	var object = factory.createObjectWithName(tabla,v1,v2,v3,v4,v5);
+	var object = factory.createObjectWithName(tabla,v1,v2,v3);
 	var existe = false;
 	
 	if ( object !== null)
