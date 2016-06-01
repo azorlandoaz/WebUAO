@@ -11,40 +11,40 @@
     <script src="../js/jquery.min.js"></script>
     <script src="../js/angular.min.js"></script>
 
-    <div id="formWrapper" ng-controller="loginCtrl">
+    <div id="formWrapper" ng-controller="registerCtrl">
         <div id="form">
             <div class="logo">
                <h1 id="title" class="hidden"><span id="logo">Registro <span>UAO</span></span></h1>
             </div>
-            <form ng-submit="clickLogin()">
+            <form ng-submit="clickRegister()">
                 <div class="form-item">
-                    <p class="formLabel">Nombre</p>
-                    <input type="text" name="email" id="email" class="form-style" autocomplete="off" ng-model="login.username" />
-                </div>
-                 <div class="form-item">
-                    <p class="formLabel">Codigo</p>
-                    <input type="text" name="email" id="email" class="form-style" autocomplete="off" ng-model="login.username" />
-                </div>
-                 <div class="form-item">
-                    <p class="formLabel">Usuario</p>
-                    <input type="text" name="email" id="email" class="form-style" autocomplete="off" ng-model="login.username" />
+                    <p class="formLabel">UserName</p>
+                    <input type="text" name="nombre" id="nombre" class="form-style" autocomplete="off" ng-model="nUsuario.username" />
                 </div>
                 <div class="form-item">
                     <p class="formLabel">Contraseña</p>
-                    <input type="password" name="password" id="password" class="form-style" ng-model="login.UserPassword" />
-                    <p>
-                        <a href="#"><small>¿Olvido su contraseña?</small></a>
-                    </p>
+                    <input type="password" name="password" id="password" class="form-style" ng-model="nUsuario.Password" />
+
                 </div>
+
+               <div class="form-item">
+                    <p class="formLabel">Tipo</p>
+                    <input type="text" name="tipo" id="tipo" class="form-style" autocomplete="off" ng-model="nUsuario.tipo" />
+                </div>
+                    <div class="form-item" >
+                        <p class="formLabel">Imagen</p>
+                         <input type="file" file-model="nUsuario.file" required><br>
+                          <img ng-show="dato" ng-src="{{dato}}" height="100" width="100"><br>
+                      </div>
                 <div class="form-item">
+                    <a href="http://localhost:8081/Views/login.html"><small>Regresar</small></a>
                     <input type="submit" class="login pull-right" value="Registrar">
-                    {{login.error}}
                     <div class="clear-fix"></div>
                 </div>
             </form>
         </div>
 
     </div>
-<script src="../js/Login.js"></script>
+<script src="../js/RegistroControl.js"></script>
 </body>
 </html>

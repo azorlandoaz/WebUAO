@@ -4,7 +4,7 @@ module.exports.createObjectWithName = function(coleccion, v1, v2, v3, v4, v5) {
 	var obj = null;
 	
 	if ( coleccion == 'User') {
-		obj = new User({username:v1, password:v2, type:v3});
+		obj = new User({username:v1, password:v2, type:v3, img:v4});
 	}
 	else if ( coleccion == 'Registro') {
 		obj = new Registro({IdUsuario:v1,TipoLog:v2, Fecha:v3});
