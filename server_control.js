@@ -30,7 +30,7 @@ app.get('/createRegistro/:collection/:v1/:v2/:v3',Registro_Service.createRegistr
 
 app.get('/readUser/:param/:value',User_Service.readUsuario);
 app.get('/readUser/:param',User_Service.readUsuarioByName);
-app.get('/createUser/:v1/:v2/:v3',User_Service.createUsuario);
+app.get('/createUser/:v1/:v2/:v3/:v4',User_Service.createUsuario);
 
 app.get('/createEnrollment/:collection/:v1/:v2',Enrollment_Service.create);
 app.get('/readEnrollment/:collection',Enrollment_Service.read);
